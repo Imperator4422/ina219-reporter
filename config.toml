@@ -1,0 +1,4 @@
+grafana_url = ""
+stream_id = "ina219"
+api_token = ""
+target_fps = 30
