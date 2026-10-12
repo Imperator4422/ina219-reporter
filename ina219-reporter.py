@@ -49,14 +49,13 @@ def main():
             voltage = ina.bus_voltage         # Voltage in volts (V)
             current = ina.current             # Current in milliamps (mA)
             power = ina.power                 # Power in watts (W)
-            shunt_voltage = ina.shunt_voltage # Shunt voltage in millivolts (mV)
 
             # 2. Format as InfluxDB Line Protocol
             timestamp_ns = time.time_ns()
             payload = (
                 f"power_monitoring,device=ina219 "
                 f"bus_voltage={voltage:.4f},current_mA={current:.2f},"
-                f"power_W={power:.4f},shunt_mV={shunt_voltage:.2f} "
+                f"power_W={power:.4f} "
                 f"{timestamp_ns}"
             )
 
