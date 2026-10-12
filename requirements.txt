@@ -1,3 +1,4 @@
 adafruit-blinka
 adafruit-circuitpython-ina219
 requests
+RPi.GPIO
