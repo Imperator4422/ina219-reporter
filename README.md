@@ -41,8 +41,7 @@ target_fps = 30
 
 Set `grafana_url` to the Grafana base URL, `stream_id` to the target Grafana
 Live stream, and `target_fps` to the desired sampling rate. Set `api_token` to
-your Grafana API token when authentication is required. Keep tokens private;
-do not commit them to the repository.
+your Grafana API token when authentication is required.
 
 ## Run
 
