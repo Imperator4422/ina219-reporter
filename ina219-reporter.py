@@ -1,16 +1,20 @@
 import time
+import tomllib
+from pathlib import Path
+
 import board
 import busio
 import requests
 from adafruit_ina219 import INA219, ADCResolution
 
-# --- Configuration ---
-GRAFANA_URL = ""
-STREAM_ID = "ina219"  # Target channel ID in Grafana Live
-API_TOKEN = ""
+CONFIG_PATH = Path(__file__).with_name("config.toml")
+with CONFIG_PATH.open("rb") as config_file:
+    config = tomllib.load(config_file)
 
-# Target frequency setup
-TARGET_FPS = 30
+GRAFANA_URL = config["grafana_url"]
+STREAM_ID = config["stream_id"]
+API_TOKEN = config["api_token"]
+TARGET_FPS = config["target_fps"]
 INTERVAL = 1.0 / TARGET_FPS
 
 # --- Initialize Hardware ---
