@@ -1,3 +1,5 @@
+DISCLAIMER: THIS IS NEARLY 100% VIBE CODED
+
 # INA219 Reporter
 
 Streams voltage, current, and power readings from an INA219 sensor to a Grafana
@@ -10,16 +12,13 @@ Live stream.
 - Python 3.11 or newer
 - I²C enabled on the board
 
-On Raspberry Pi OS, enable I²C using `sudo raspi-config` (Interface Options →
-I2C), then reboot if prompted.
-
 ## Install
 
 From the repository directory, create and activate a virtual environment:
 
 ```sh
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 Install the Python dependencies:
